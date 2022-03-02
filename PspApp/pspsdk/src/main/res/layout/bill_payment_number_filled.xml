@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/header_layout"
+        android:background="@color/color_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrowimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginStart="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:text="Telkomsel"
+           />
+
+    </LinearLayout>
+
+<!--    <android.support.v7.widget.CardView-->
+<!--        android:id="@+id/card_phone_number"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="111dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        app:cardBackgroundColor="@android:color/white"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/header_layout"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/header_layout"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txt_phonemunber"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="17dp"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/phone_number"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txt_pnumber"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:gravity="center"-->
+<!--            android:text="918106170677 "-->
+<!--            android:textSize="16dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_transactiondetails" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/txt_mynumber"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:fontFamily="@font/roboto_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/mynumber"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_phonemunber" />-->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:background="@color/grey"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_mynumber"/>-->
+<!--    </android.support.v7.widget.CardView>-->
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/amount_acc_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:visibility="visible"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:id="@+id/layout_item1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/card_bill_proceed"-->
+<!--       >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="24dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_txn_time"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="11dp"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="5.000"-->
+<!--                android:textColor="#123456"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/img_txn_logo"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--            &lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:id="@+id/lbl_paid_received"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_marginTop="11dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:text="Blibli Order Number: 1204061104"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textAppearance="@style/TextAppearance.AppCompat.Caption"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textColor="#889aac"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textSize="12sp"&ndash;&gt;-->
+<!--            &lt;!&ndash;       app:layout_constraintStart_toEndOf="@+id/img_txn_logo"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="11dp"-->
+<!--                android:layout_marginBottom="11dp"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:text="Masa aktif 7 hari"-->
+<!--                android:textColor="#889aac"-->
+<!--                android:textSize="14sp"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/lbl_paid_received"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/img_txn_logo" />-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:gravity="end">-->
+<!--            <TextView-->
+<!--                android:id="@+id/txt_amount"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:padding="5dp"-->
+<!--                android:background="#b2f7e2"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:singleLine="true"-->
+<!--                android:text=" Rp 5.500"-->
+<!--                android:gravity="center"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                android:textColor="#123456"-->
+<!--                android:textSize="14sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+<!--    <View-->
+<!--        android:id="@+id/view_1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="#e9ecef"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/layout_item1"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:id="@+id/layout_item2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view_1"-->
+<!--        >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="24dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_txn_time1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="11dp"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="5.000"-->
+<!--                android:textColor="#123456"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/img_txn_logo"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--            &lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:id="@+id/lbl_paid_received"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_marginTop="11dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:text="Blibli Order Number: 1204061104"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textAppearance="@style/TextAppearance.AppCompat.Caption"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textColor="#889aac"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textSize="12sp"&ndash;&gt;-->
+<!--            &lt;!&ndash;       app:layout_constraintStart_toEndOf="@+id/img_txn_logo"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_name1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="11dp"-->
+<!--                android:layout_marginBottom="11dp"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:text="Masa aktif 7 hari"-->
+<!--                android:textColor="#889aac"-->
+<!--                android:textSize="14sp"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/lbl_paid_received"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/img_txn_logo" />-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:gravity="end">-->
+<!--            <TextView-->
+<!--                android:id="@+id/txt_amount1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:padding="5dp"-->
+<!--                android:background="#b2f7e2"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:singleLine="true"-->
+<!--                android:text=" Rp 5.500"-->
+<!--                android:gravity="center"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                android:textColor="#123456"-->
+<!--                android:textSize="14sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+<!--    <View-->
+<!--        android:id="@+id/view_2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="#e9ecef"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/layout_item2"/>-->
+
+<!--    <android.support.v4.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/pullToRefresh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/lbl_indepay_footer4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view_txn_info">-->
+
+<!--        <android.support.v7.widget.RecyclerView-->
+<!--            android:id="@+id/rv_bill_filled_number_recycler"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/card_bill_proceed">-->
+<!--        </android.support.v7.widget.RecyclerView>-->
+
+    <!--        </android.support.v4.widget.SwipeRefreshLayout>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_pending_requests"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:src="@drawable/ic_no_pending_collect"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/lbl_indepay_footer4"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:drawableRight="@drawable/indepay"-->
+<!--        android:fontFamily="@font/roboto_medium"-->
+<!--        android:gravity="center_vertical|end"-->
+<!--        android:textAlignment="textEnd"-->
+<!--        android:typeface="normal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.hmomeni.progresscircula:progresscircula:0.2.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c96f0125231f78d4032fc6976bc8d48d/transformed/progresscircula-0.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c96f0125231f78d4032fc6976bc8d48d/transformed/progresscircula-0.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c96f0125231f78d4032fc6976bc8d48d/transformed/progresscircula-0.2.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hmomeni.progresscircula/progresscircula/0.2.1/7c55dc70452d779468007d4c9e98ec1deb2a3ebf/progresscircula-0.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hmomeni.progresscircula/progresscircula/0.2.1/f53fdc1172ca98c3ccea462f4cf50f788be5b684/progresscircula-0.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

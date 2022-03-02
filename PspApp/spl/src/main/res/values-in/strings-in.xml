@@ -1,0 +1,58 @@
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<resources>
+    <string name="spl_app_name">SPL</string>
+    <string name="spl_shared_pref">SPL_PREF</string>
+    <string name="spl_font_default" />
+
+    <string name="spl_request_loading_title">Menyambung ke Server</string>
+    <string name="spl_request_loading_message">Harap tunggu... </string>
+    <string name="spl_server_error">Kesalahan Server</string>
+    <string name="spl_pin_cannot_blank">Pin tidak dapat kosong!</string>
+    <string name="spl_confirm_pin">Harap konfirmasi pin</string>
+    <string name="spl_internet_connec">Harap periksa sambungan internet Anda</string>
+    <string name="spl_no_internet_connec">No internet Connection</string>
+    <string name="spl_enter_all_details">Harap masukkan semua rincian.</string>
+    <string name="spl_continue_trans">Data aplikasi dan daftar lagi</string>
+    <string name="spl_device_failed">Validasi perangkat gagal! </string>
+    <string name="spl_card_pin">Masukkan PIN Kartu</string>
+    <string name="spl_otp">Masukkan OTP</string>
+    <string name="spl_permission_required">Dibutuhkan izin status telepon</string>
+    <string name="spl_capture_info">Merekam informasi perangkat, harap tunggu...</string>
+    <string name="spl_enter_mpin">Masukkan MPIN</string>
+    <string name="spl_confirm_mpin">Konfirmasi MPIN</string>
+    <string name="spl_card_details">Verifikasi Rincian Kartu</string>
+    <string name="spl_debit_six">6 angka terakhir dari kartu debit Anda</string>
+    <string name="spl_expiry">Masukkan masa habis MM/YY</string>
+    <string name="spl_resend_otp">KIRIM ULANG OTP</string>
+    <string name="spl_continu">Lanjutkan</string>
+    <string name="spl_to">Ke</string>
+    <string name="spl_payee">Penerima Bayar</string>
+    <string name="spl_from">Dari</string>
+    <string name="spl_amount">Jumlah</string>
+    <string name="spl_account">Rekening</string>
+    <string name="spl_details">Rincian</string>
+    <string name="spl_note">Keterangan</string>
+    <string name="spl_id">Identifikas</string>
+</resources>

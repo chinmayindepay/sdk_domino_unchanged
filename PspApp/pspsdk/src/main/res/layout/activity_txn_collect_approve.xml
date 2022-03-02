@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/collect_approval_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"
+    tools:context=".transaction.collectApprove.TxnCollectApproveActivity">
+
+    <include
+        android:id="@+id/llProgressBar"
+        android:visibility="gone"
+        layout="@layout/layout_progress_bar_with_text"/>
+
+
+    <TextView
+        android:id="@+id/lbl_indepay_footer6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:drawableRight="@drawable/indepay"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical|end"
+        android:text="@string/powered_by"
+        android:textAlignment="textEnd"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/blue_round_bg"
+        android:src="@drawable/ic_monetization"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/collect_request"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/collect_details_container"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle4">
+
+        <TextView
+            android:id="@+id/lbl_requested_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/requested_amt"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_requested_by" />
+
+        <TextView
+            android:id="@+id/txt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_requested_amt"
+            app:layout_constraintStart_toEndOf="@+id/lbl_requested_amt" />
+
+        <TextView
+            android:id="@+id/lbl_min_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/min_amt"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_requested_amt" />
+
+        <TextView
+            android:id="@+id/txt_min_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_min_amount"
+            app:layout_constraintStart_toEndOf="@+id/lbl_min_amount" />
+
+        <TextView
+            android:id="@+id/lbl_requested_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/requested_by"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_requested_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_requested_by"
+            app:layout_constraintStart_toEndOf="@+id/lbl_requested_by"
+            tools:layout_editor_absoluteY="13dp" />
+
+        <!--<TextView
+            android:id="@+id/lbl_payment_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Payment Address:"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_requested_by" />
+
+        <TextView
+            android:id="@+id/txt_payment_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_payment_address"
+            app:layout_constraintStart_toEndOf="@+id/lbl_payment_address" />-->
+
+        <TextView
+            android:id="@+id/lbl_expire_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/will_expire"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_min_amount"
+            app:layout_goneMarginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txt_expire_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_expire_at"
+            app:layout_constraintStart_toEndOf="@+id/lbl_expire_at" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/merchant_collect_container"
+        android:layout_width="0dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle4">
+
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter amount"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_approve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/dark_blue_round_bg"
+        android:text="@string/approve"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_indepay_footer6"
+        app:layout_constraintEnd_toStartOf="@+id/btn_decline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_decline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/dark_blue_round_bg"
+        android:text="@string/decline"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_indepay_footer6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_approve" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    >
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_to"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_below="@id/tv1"
+        android:id="@+id/tv_payee_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_payee"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_below="@id/tv1"
+        android:id="@+id/tv_payee_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_payee_container"
+        android:gravity="right"
+        />
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@id/tv_payee_container"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/spl_grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_from"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_below="@id/tv2"
+        android:id="@+id/tv_amount_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_amount"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_below="@id/tv2"
+        android:id="@+id/tv_amount_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_amount_container"
+        android:gravity="right"
+        />
+    <TextView
+        android:layout_below="@id/tv_amount_container"
+        android:id="@+id/tv_account_no_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_account"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_below="@id/tv_amount_container"
+        android:id="@+id/tv_account_no_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_account_no_container"
+        />
+    <TextView
+        android:layout_below="@id/tv_account_no_container"
+        android:id="@+id/tv_bic_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIC"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_below="@id/tv_account_no_container"
+        android:id="@+id/tv_bic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_bic_container"
+        android:gravity="right"
+        />
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@id/tv_bic_container"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/spl_grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_below="@id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_details"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_below="@id/tv3"
+        android:id="@+id/tv_note_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_note"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_below="@id/tv3"
+        android:id="@+id/tv_note_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_note_container"
+        android:gravity="right"
+        />
+    <TextView
+        android:layout_below="@id/tv_note_container"
+        android:id="@+id/tv_txn_id_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spl_id"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_below="@id/tv_note_container"
+        android:id="@+id/tv_txn_id_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_txn_id_container"
+        android:gravity="right"
+        />
+</RelativeLayout>

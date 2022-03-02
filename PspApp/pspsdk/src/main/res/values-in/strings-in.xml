@@ -1,0 +1,205 @@
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<resources>
+    <string name="app_name">SDK</string>
+
+    <string name="title_verify_num">Verifikasi Nomor Telepon Seluler Anda</string>
+    <string name="sdk_shared_pref">SDK_PREF</string>
+    <string name="infoVerify">Harap pastikan nomor seluler yang terdaftar di aplikasi ini sama dengan nomor yang ada di telepon ini.</string>
+    <string name="sendSMSTxt">Kami akan mengirim SMS dari telepon Anda untuk memastikan nomor telepon Anda.</string>
+    <string name="smsCharges">(Kemungkinan dikenakan biaya SMS)</string>
+    <string name="registration_success">Selamat! Anda telah terdaftar dengan kami.</string>
+
+
+    <!--Transaction history details-->
+
+    <!--Collect flow-->
+
+
+    <!--UI MESSAGES-->
+    <string name="request_loading_title">Menyambung ke Server</string>
+    <string name="request_loading_message">Harap tunggu...</string>
+    <string name="server_error">Kesalahan Server</string>
+    <string name="please_select_one_account_to_register"><u>HARAP PILIH SATU REKENING UNTUK MENDAFTAR</u></string>
+    <string name="view_balance">Melihat Saldo</string>
+    <string name="reset_mpin">Reset Mpin</string>
+    <string name="set_mpin">Setel MPin</string>
+
+    <string name="add_beneficiary">TAMBAHKAN PENERIMA</string>
+
+    <string name="defaultText">Pilih Perusahaan Anda</string>
+    <string name="beneficiary_list">Daftar Penerima</string>
+
+    <!--New Added Strings -->
+    <string name="powered_by">Dipersembahkan oleh\u0020 \u0020 \u0020</string>
+    <string name="registration_failed">Pendaftaran Pengguna gagal, harap coba lagi</string>
+    <string name="registration_failed_title">Pendaftaran gagal!</string>
+    <string name="already_registered">Sudah terdaftar</string>
+    <string name="standard_charges">Dikenakan biaya biasa</string>
+    <string name="sms_send">Kirim SMS</string>
+    <string name="success">Berhasil</string>
+    <string name="failed">Gagal</string>
+    <string name="no_acc_with_mobile_number">Tidak ada rekening yang terhubung dengan nomor seluler Anda.</string>
+    <string name="no_acc_with_mobile_number_add">No account is linked with your mobile number.Do you want to add an account?</string>
+    <string name="set_acc_as_def">Apakah Anda mau mengatur rekening ini sebagai rekening utama Anda?</string>
+    <string name="acc_succ_mapped">Rekening berhasil dipetakan pada\u0020</string>
+    <string name="def_acc">\u0020sekarang adalah rekening utama Anda untuk transaksi.</string>
+    <string name="acc">Rekening\u0020</string>
+    <string name="failed_to_fetch">FGagal mengambil daftar bank, harap mencoba lain kali.</string>
+    <string name="no_data">Tidak ditemukan data!</string>
+    <string name="please_enter_debit_card">Harap masukkan enam angka terakhir dari kartu debit.</string>
+    <string name="no_acc_title">Tidak ditemukan akun!</string>
+    <string name="ledger">Saldo Umum</string>
+    <string name="available">Saldo Tersedia</string>
+    <string name="mpin_succ">Penyetelan/Reset Mpin berhasil.</string>
+    <string name="trn_cmplt">Transaksi selesai.</string>
+    <string name="receive_from">Terima dari:</string>
+    <string name="received_from">Diterima dari:</string>
+    <string name="pay_to">Bayar kepada:</string>
+    <string name="paid_to">Dibayarkan kepada:</string>
+    <string name="pending">Tertunda</string>
+    <string name="declined">Ditolak</string>
+    <string name="completed">Selesai</string>
+    <string name="internet_connec">Harap periksa sambungan internet Anda</string>
+    <string name="login_again">Silakan login kembali.</string>
+    <string name="timed_out">Waktu sesi habis</string>
+    <string name="register_user">Perangkat Anda tidak terdaftar pada RTP. Daftar sekarang?</string>
+    <string name="register_user_title">Pendaftaran tidak lengkap</string>
+    <string name="mobile_not_registered">Nomor seluler tidak terdaftar.</string>
+    <string name="send_invitation">Kirim Undangan?</string>
+    <string name="tran_status">Status Transaksi</string>
+    <string name="invalid_mpin">MPIN Salah</string>
+    <string name="no_sim">SIM tidak ditemukan. Harap masukkan SIM dan coba lagi.</string>
+    <string name="sim_error">SIM error</string>
+    <string name="register_success">Pendaftaran sukses</string>
+    <string name="sms_send_fail">Pengiriman SMS gagal...</string>
+    <string name="name_error">Harap masukkan nama.</string>
+    <string name="mobile_error">Harap masukkan nomor seluler yang berlaku.</string>
+    <string name="valid_mobile_error">Please enter valid mobile number.</string>
+    <string name="app_error">Harap pilih aplikasi yang terhubung.</string>
+    <string name="bene_add_success">Penerima berhasil ditambahkan</string>
+    <string name="name">Nama</string>
+    <string name="mobile">Seluler</string>
+    <string name="app_namme">Nama Aplikasi</string>
+    <string name="paid_by">Paid By</string>
+    <string name="collect_request_rejected">Permintaan pengambilan ditolak.</string>
+    <string name="request_failed">Request Failed!</string>
+    <string name="search_again">Mencari lagi?</string>
+    <string name="trans_not_found">Nomor transaksi ditemukan!</string>
+    <string name="debit_from">Debit From:</string>
+    <string name="debited_from">Debited From:</string>
+    <string name="invalid_user">Nama Pengguna Salah</string>
+    <string name="transaction_succ">Transaksi berhasil</string>
+    <string name="transaction_pend">Transaksi tertunda</string>
+    <string name="transaction_in_pro">Transaksi sedang berjalan</string>
+    <string name="transaction_dec">Transaksi ditolak</string>
+    <string name="failure_reason">Alasan gagal</string>
+    <string name="transaction_failed">Transaksi gagal</string>
+    <string name="pending_transction">Transaksi tertunda</string>
+    <string name="ledger_bal">Saldo Umum</string>
+    <string name="avail_bal">Saldo Tersedia</string>
+    <string name="acc_bal">Saldo Rekening</string>
+    <string name="collect_approve">Pengambilan Disetujui</string>
+    <string name="payment_complete">Pembayaran lengkap.</string>
+    <string name="request_sent">Permintaan terkirim.</string>
+    <string name="something_wrong">Terjadi kesalahan!</string>
+    <string name="select_contact_for_transaction">Pilih Kontak untuk Transaksi</string>
+    <string name="select_beneficiary">Pilih Penerima</string>
+    <string name="select_your_bank">PILIH BANK ANDA</string>
+    <string name="add_acc">TAMBAHKAN REKENING</string>
+    <string name="add_acc_sentence">Tambahkan Rekening</string>
+    <string name="more_payment_options">More Payment Options</string>
+    <string name="following_mapped">Berikut adalah rekening yang dipetakan</string>
+    <string name="amount">Jumlah</string>
+    <string name="collect_request">Rincian Permintaan Pengambilan</string>
+    <string name="requested_amt">Permintaan Jumlah:</string>
+    <string name="min_amt">Jumlah Minimum:</string>
+    <string name="sim_one">SIM 1</string>
+    <string name="sim_two">SIM 2</string>
+    <string name="verify_via_sms">PERIKSA LEWAT SMS</string>
+    <string name="proceed">Lanjutkan</string>
+    <string name="request_amt">Permintaan Jumlah</string>
+    <string name="requested_by">Permintaan Oleh:</string>
+    <string name="bank_name">Nama Bank</string>
+    <string name="initiate_transaction">Memulai Transaksi</string>
+    <string name="submit">MASUKKAN</string>
+    <string name="will_expire">Akan Berakhir:</string>
+    <string name="approve">Setuju</string>
+    <string name="decline">Tolak</string>
+    <string name="transaction_details">Rincian Transaksi</string>
+    <string name="transaction_id">Identifikasi Transaksi</string>
+    <string name="cancelled">Dibatalkan</string>
+    <string name="credited_to">Dikreditkan pada</string>
+    <string name="message">Pesan</string>
+    <string name="respond_to_collect">Menanggapi permintaan pengambilan</string>
+    <string name="respond">Menanggapi</string>
+    <string name="postpone">Menunda</string>
+    <string name="mobile_number">Nomor Seluler</string>
+    <string name="linked_app_name">Nama Aplikasi Terhubung</string>
+    <string name="bene_list">DAFTAR PENERIMA :-</string>
+    <string name="bene_name">Nama Penerima</string>
+    <string name="bene_id">Identifkasi Penerima</string>
+    <string name ="bene_account">Nomor Rekening Penerima</string>
+    <string name ="transaction_history">Rekam Jejak Transaksi</string>
+    <string name="ok">  OK</string>
+    <string name="account_type">Jenis Rekening:</string>
+    <string name="account_number">Nomor Rekening:</string>
+    <string name="mpin_available">Mpin Tersedia</string>
+    <string name="mapping_done">Pemetaan Rekening Selesai</string>
+    <string name="manage_acc">MANAGE ACCOUNT</string>
+    <string name="view_history">VIEW TRANSACTION HISTORY</string>
+    <string name="font_default" />
+
+    <string name="choose_account">Choose Account</string>
+    <string name="my_default_account">My Default Account</string>
+
+    <string name="prepaid">Prepaid</string>
+    <string name="postpaid">Postpaid</string>
+    <string name="pulsa">Pulsa/Paket Data</string>
+    <string name="pln_prepaid">PLN Prepaid</string>
+    <string name="internet">Internet</string>
+    <string name="e_money">E-Money</string>
+    <string name="vocher_game">Voucher Game</string>
+    <string name="bpjs">BPJS</string>
+    <string name="pascabayar">Pascabayar</string>
+    <string name="pln_postpaid">PLN Postpaid</string>
+    <string name="pdam">PDAM</string>
+    <string name="next">Next</string>
+    <string name="mynumber">MY NUMBER</string>
+    <string name="phone_number">Phone Number</string>
+
+
+
+    <string name="base_url">https://maps.googleapis.com</string>
+
+
+
+    <string name="fragment_pulsa">Pulsa Fragment</string>
+    <string name="packet_data_fragment">Packet Data Fragment</string>
+    <string name="movie_fragment">Movie Fragment</string>
+
+
+
+
+</resources>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".billPayment.BillPaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/header_layout"
+        android:background="@color/color_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrowimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:text="All Bills" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbl_bill_payments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text=""
+        android:textColor="#123456"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/prepaid_acc_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:visibility="visible"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_postpaid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_bill_payments" />
+
+
+    <!--    <android.support.constraint.ConstraintLayout-->
+<!--        android:id="@+id/home_prepaid"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lbl_bill_payments">-->
+
+<!--        <android.support.constraint.ConstraintLayout-->
+<!--            android:id="@+id/ll_bill_payments_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/pulsa"-->
+<!--                android:layout_width="76dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--               app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/circle_bg"-->
+<!--                    android:padding="15dp"-->
+<!--                    >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_pulsa"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:adjustViewBounds="false"-->
+<!--                    android:cropToPadding="false"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/pulsa" />-->
+<!--                </RelativeLayout>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_pulsa"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:text="@string/pulsa"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="12sp" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/internet"-->
+<!--                android:layout_width="76dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/e_money"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/pln_prepaid"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/circle_bg"-->
+<!--                    android:padding="15dp"-->
+<!--                    >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_internet"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                  android:background="@drawable/internet"-->
+<!--                   />-->
+<!--                </RelativeLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_internet"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="16dp"-->
+<!--                    android:text="@string/internet"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/e_money"-->
+<!--                android:layout_width="76dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/internet"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/circle_bg"-->
+<!--                    android:padding="15dp"-->
+<!--                    >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_games_voucher_1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                   android:scaleType="centerCrop"-->
+<!--                  android:background="@drawable/e_money" />-->
+<!--                </RelativeLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_games_voucher_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="16dp"-->
+
+<!--                    android:text="@string/e_money"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/pln_prepaid"-->
+<!--                android:layout_width="76dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/internet"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/pulsa"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/circle_bg"-->
+<!--                    android:padding="15dp"-->
+<!--                    >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_pln_prepaid"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/pln_prepaid" />-->
+
+<!--                </RelativeLayout>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_pln_prepaid"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:text="@string/pln_prepaid"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+
+<!--        </android.support.constraint.ConstraintLayout>-->
+
+<!--        <android.support.constraint.ConstraintLayout-->
+<!--            android:id="@+id/ll_bill_payments_2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ll_bill_payments_1">-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/pulsa_2"-->
+<!--                android:layout_width="76dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/circle_bg"-->
+<!--                    android:padding="15dp"-->
+<!--                    >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_voucher_game"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:adjustViewBounds="false"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/g_game" />-->
+<!--                </RelativeLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_voucher_game"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:text="@string/vocher_game"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/pendidikan_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="76dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintEnd_toStartOf="@+id/games_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintHorizontal_bias="0.5"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintStart_toEndOf="@+id/bpjs_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintTop_toTopOf="parent">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/img_pendidikan_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:backgroundTint="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:srcCompat="@drawable/google_play" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/txt_pendidikan_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Google Play"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@android:color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="10sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/games_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="76dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintHorizontal_bias="0.5"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintStart_toEndOf="@+id/pendidikan_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintTop_toTopOf="parent">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/img_games_voucher_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:backgroundTint="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:srcCompat="@drawable/insurance" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/txt_games_voucher_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Insurance"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@android:color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="10sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+
+
+<!--        </android.support.constraint.ConstraintLayout>-->
+
+
+
+<!--    </android.support.constraint.ConstraintLayout>-->
+
+    <TextView
+        android:id="@+id/lbl_postpaid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text=""
+        android:textColor="#123456"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prepaid_acc_list_container" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/postpaid_acc_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:visibility="visible"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_postpaid" />
+
+<!--    <android.support.constraint.ConstraintLayout-->
+<!--        android:id="@+id/home_postpaid"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lbl_postpaid">-->
+
+<!--    <android.support.constraint.ConstraintLayout-->
+<!--        android:id="@+id/ll_postpaid"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/bpjs"-->
+<!--            android:layout_width="76dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/circle_bg"-->
+<!--                android:padding="15dp"-->
+<!--                >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_bpjs"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:adjustViewBounds="false"-->
+<!--                    android:cropToPadding="false"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/pulsa" />-->
+<!--            </RelativeLayout>-->
+<!--            <TextView-->
+<!--                android:id="@+id/txt_bpjs"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+
+<!--                android:text="@string/bpjs"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="14sp" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/pln_postpaid"-->
+<!--            android:layout_width="76dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/pdam"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/pascabayar"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/circle_bg"-->
+<!--                android:padding="15dp"-->
+<!--                >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_pln_postpaid"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/internet"-->
+<!--                    />-->
+<!--            </RelativeLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_pln_postpaid"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="@string/pln_postpaid"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="14sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/pdam"-->
+<!--            android:layout_width="76dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/pln_postpaid"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/circle_bg"-->
+<!--                android:padding="15dp"-->
+<!--                >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_pdam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/e_money" />-->
+<!--            </RelativeLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_pdam"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:text="@string/pdam"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="14sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/pascabayar"-->
+<!--            android:layout_width="76dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/pln_postpaid"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/bpjs"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/circle_bg"-->
+<!--                android:padding="15dp"-->
+<!--                >-->
+<!--                <ImageButton-->
+<!--                    android:id="@+id/img_pascabayar"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/pln_prepaid" />-->
+
+<!--            </RelativeLayout>-->
+<!--            <TextView-->
+<!--                android:id="@+id/txt_pascabayar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:text="@string/pascabayar"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="14sp" />-->
+<!--        </LinearLayout>-->
+
+<!--    </android.support.constraint.ConstraintLayout>-->
+<!--    </android.support.constraint.ConstraintLayout>-->
+
+
+
+
+</android.support.constraint.ConstraintLayout>

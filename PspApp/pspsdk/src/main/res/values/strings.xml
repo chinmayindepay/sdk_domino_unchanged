@@ -1,0 +1,202 @@
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<resources>
+    <string name="app_name">SDK</string>
+
+    <string name="title_verify_num">Verify Your Mobile Number</string>
+    <string name="sdk_shared_pref">SDK_PREF</string>
+    <string name="infoVerify">Please make sure, your registered mobile number in this application is same number you have in this phone.</string>
+    <string name="sendSMSTxt">We will send an SMS from your phone to verify your phone number.</string>
+    <string name="smsCharges">(SMS Charges may apply)</string>
+    <string name="registration_success">Congratulations! You are now registered with us.</string>
+
+
+    <!--Transaction history details-->
+
+    <!--Collect flow-->
+
+
+    <!--UI MESSAGES-->
+    <string name="request_loading_title">Connecting Server</string>
+    <string name="request_loading_message">Please wait.. </string>
+    <string name="server_error">Server Error</string>
+    <string name="please_select_one_account_to_register"><u>PLEASE SELECT ONE ACCOUNT TO REGISTER</u></string>
+    <string name="view_balance">View Balance</string>
+    <string name="reset_mpin">Reset Mpin</string>
+    <string name="set_mpin">Set Mpin</string>
+
+    <string name="add_beneficiary">ADD BENEFICIARY</string>
+
+    <string name="defaultText">  Select your Company  </string>
+    <string name="beneficiary_list">Beneficiary List</string>
+
+    <!--New Added Strings -->
+    <string name="powered_by">Powered by\u0020 \u0020 \u0020</string>
+    <string name="registration_failed">User registration failed, please try again</string>
+    <string name="registration_failed_title">Registration failed!</string>
+    <string name="already_registered">Already registered</string>
+    <string name="standard_charges">Standard charges apply</string>
+    <string name="sms_send">SMS Send</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="no_acc_with_mobile_number">No account is linked with your mobile number.</string>
+    <string name="no_acc_with_mobile_number_add">No account is linked with your mobile number.Do you want to add an account?</string>
+    <string name="set_acc_as_def">Do you want to set this account as your default account?</string>
+    <string name="acc_succ_mapped">Account successfully mapped to\u0020</string>
+    <string name="def_acc">\u0020is now your default account for transaction.</string>
+    <string name="acc">Account\u0020</string>
+    <string name="failed_to_fetch">Failed to fetch bank list, please try after some time.</string>
+    <string name="no_data">No data found!</string>
+    <string name="please_enter_debit_card">Please enter the last six digits of debit card.</string>
+    <string name="no_acc_title">No account found!</string>
+    <string name="ledger">Ledger Balance</string>
+    <string name="available">Available Balance</string>
+    <string name="mpin_succ">Mpin Set/Reset successful.</string>
+    <string name="trn_cmplt">Transaction Complete</string>
+    <string name="receive_from">Receive from:</string>
+    <string name="received_from">Received from:</string>
+    <string name="pay_to">Pay to:</string>
+    <string name="paid_to">Paid to:</string>
+    <string name="pending">Pending</string>
+    <string name="declined">Declined</string>
+    <string name="completed">Completed</string>
+    <string name="internet_connec">Please check your internet connectivity</string>
+    <string name="login_again">Please login again.</string>
+    <string name="timed_out">Session Timed Out</string>
+    <string name="register_user">Your device is not registered to RTP, register now?</string>
+    <string name="register_user_title">Registration incomplete</string>
+    <string name="mobile_not_registered">Mobile number not registered.</string>
+    <string name="send_invitation">Send invitation?</string>
+    <string name="tran_status">Transaction Status</string>
+    <string name="invalid_mpin">Invalid MPIN</string>
+    <string name="no_sim">NO SIM Found. Please insert a SIM and try again</string>
+    <string name="sim_error">SIM error</string>
+    <string name="register_success">Registration Success!</string>
+    <string name="sms_send_fail">SMS sending failed...</string>
+    <string name="name_error">Please enter name.</string>
+    <string name="mobile_error">Please enter mobile number.</string>
+    <string name="valid_mobile_error">Please enter valid mobile number.</string>
+    <string name="app_error">Please select linked app.</string>
+    <string name="bene_add_success">Successfully added beneficiary</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="app_namme">App Name</string>
+    <string name="paid_by">Paid By</string>
+    <string name="collect_request_rejected">Collect request rejected.</string>
+    <string name="request_failed">Request Failed!</string>
+    <string name="search_again">Search again?</string>
+    <string name="trans_not_found">No transaction found!</string>
+    <string name="debit_from">Debit From:</string>
+    <string name="debited_from">Debited From:</string>
+    <string name="invalid_user">Invalid User</string>
+    <string name="transaction_succ">Transaction successful</string>
+    <string name="transaction_pend">Transaction pending</string>
+    <string name="transaction_in_pro">Transaction in progress</string>
+    <string name="transaction_dec">Transaction Declined</string>
+    <string name="failure_reason">Failure Reason</string>
+    <string name="transaction_failed">Transaction failed</string>
+    <string name="pending_transction">Pending Transactions</string>
+    <string name="ledger_bal">Ledger Balance</string>
+    <string name="avail_bal">Available Balance</string>
+    <string name="acc_bal">Account Balance</string>
+    <string name="collect_approve">Collect Approved</string>
+    <string name="payment_complete">Payment complete.</string>
+    <string name="request_sent">Request sent.</string>
+    <string name="something_wrong">Something wrong happened!</string>
+    <string name="select_contact_for_transaction">Select Contact For Transaction</string>
+    <string name="select_beneficiary">Select Beneficiary</string>
+    <string name="select_your_bank">SELECT YOUR BANK</string>
+    <string name="add_acc">ADD ACCOUNT</string>
+    <string name="add_acc_sentence">Add Account</string>
+    <string name="more_payment_options">More Payment Options  > </string>
+    <string name="following_mapped">Following are the mapped accounts</string>
+    <string name="amount">amount</string>
+    <string name="collect_request">Collect Request Details</string>
+    <string name="requested_amt">Requested Amount:</string>
+    <string name="min_amt">Minimum Amount:</string>
+    <string name="sim_one">SIM 1</string>
+    <string name="sim_two">SIM 2</string>
+    <string name="verify_via_sms">VERIFY VIA SMS</string>
+    <string name="proceed">Proceed</string>
+    <string name="request_amt">Request amount</string>
+    <string name="requested_by">Requested By:</string>
+    <string name="bank_name">Bank name</string>
+    <string name="initiate_transaction">Initiate Transaction</string>
+    <string name="submit">SUBMIT</string>
+    <string name="will_expire">Will Expire:</string>
+    <string name="approve">Approve</string>
+    <string name="decline">Decline</string>
+    <string name="transaction_details">Transaction Details</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="credited_to">Credited to</string>
+    <string name="message">Message</string>
+    <string name="respond_to_collect">Respond to the collect request</string>
+    <string name="respond">Respond</string>
+    <string name="postpone">Postpone</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="linked_app_name">Linked App Name</string>
+    <string name="bene_list">BENEFICIARY LIST :-</string>
+    <string name="bene_name">Bene Name</string>
+    <string name="bene_id">Bene ID</string>
+    <string name="bene_account">Bene Account No</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="ok">  OK</string>
+    <string name="account_type"> Account Type:</string>
+    <string name="account_number"> Account number:</string>
+    <string name="mpin_available">Mpin Available</string>
+    <string name="mapping_done">Account Mapping Done</string>
+    <string name="manage_acc">MANAGE ACCOUNT</string>
+    <string name="view_history">VIEW TRANSACTION HISTORY</string>
+    <string name="font_default" />
+
+
+    <string name="choose_account">Choose Account</string>
+    <string name="my_default_account">My Default Account</string>
+
+    <string name="prepaid">Prepaid</string>
+    <string name="postpaid">Postpaid</string>
+    <string name="pulsa">Pulsa/Paket Data</string>
+    <string name="pln_prepaid">PLN Prepaid</string>
+    <string name="internet">Internet</string>
+    <string name="e_money">E-Money</string>
+    <string name="vocher_game">Voucher Game</string>
+    <string name="bpjs">BPJS</string>
+    <string name="pascabayar">Pascabayar</string>
+    <string name="pln_postpaid">PLN Postpaid</string>
+    <string name="pdam">PDAM</string>
+    <string name="next">Next</string>
+
+    <string name="base_url">https://maps.googleapis.com</string>
+
+    <string name="mynumber">MY NUMBER</string>
+    <string name="phone_number">Phone Number</string>
+
+
+    <string name="fragment_pulsa">Pulsa Fragment</string>
+    <string name="packet_data_fragment">Packet Data Fragment</string>
+    <string name="movie_fragment">Movie Fragment</string>
+
+
+</resources>

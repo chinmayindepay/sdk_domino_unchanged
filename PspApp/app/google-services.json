@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1056729468064",
+    "firebase_url": "https://umps-mili.firebaseio.com",
+    "project_id": "umps-mili",
+    "storage_bucket": "umps-mili.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056729468064:android:a3a038b0d6b9637c",
+        "android_client_info": {
+          "package_name": "com.indepay.umps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056729468064-jrokrinns3lf1lst6abaadkkuq71b0im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA92K6a9dBiwQAbYpi44rL-ILmJNGO7jrI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

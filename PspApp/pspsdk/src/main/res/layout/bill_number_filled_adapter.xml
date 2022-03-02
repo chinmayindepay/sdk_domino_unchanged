@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txn_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+<!--        <ImageView-->
+<!--            android:id="@+id/img_txn_logo"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:background="@drawable/blue_round_bg"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/ic_pay_to" />-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/txt_txn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:textSize="16sp"
+                android:text="5.000"
+                android:textColor="#123456"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                app:layout_constraintStart_toEndOf="@+id/img_txn_logo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/lbl_paid_received"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginTop="11dp"-->
+            <!--        android:text="Blibli Order Number: 1204061104"-->
+            <!--        android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+            <!--        android:textColor="#889aac"-->
+            <!--        android:textSize="12sp"-->
+            <!--       app:layout_constraintStart_toEndOf="@+id/img_txn_logo"-->
+            <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="11dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Masa aktif 7 hari"
+                android:textColor="#889aac"
+                android:textSize="14sp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_paid_received"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_txn_logo" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:gravity="end">
+<!--            <TextView-->
+<!--                android:id="@+id/txt_txn_status"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingTop="4dp"-->
+<!--                android:paddingBottom="4dp"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:paddingRight="17dp"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:text="Success"-->
+<!--                android:textSize="12sp"-->
+<!--                android:background="@drawable/transaction_history_txn_rounded_bg"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"/>-->
+
+            <TextView
+                android:id="@+id/txt_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:background="#b2f7e2"
+                android:fontFamily="@font/roboto_medium"
+                android:singleLine="true"
+                android:text=" Rp 5.500"
+                android:gravity="center"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#123456"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view_txn_item_info"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e9ecef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

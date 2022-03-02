@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/header_layout"
+            android:background="@color/color_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_arrowimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back" />
+
+
+            <TextView
+                android:id="@+id/toolbar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:layout_marginStart="12dp"
+                android:gravity="center_horizontal"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:text="Telkomsel"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+            <TextView
+                android:id="@+id/txt_phonemunber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Phone Number/Account NUmber"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/et_number_layout"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+            <EditText
+                android:id="@+id/et_pnumber_account_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="0.6"
+                android:fontFamily="@font/roboto"
+                android:gravity="left"
+                android:background="@null"
+                android:maxLength="12"
+                android:text=""
+                android:inputType="number"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/txt_mynumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="right"
+                android:layout_weight="0.4"
+                android:text="@string/mynumber"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mynumber"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:text="NEXT"/>
+    </LinearLayout>
+  </android.support.constraint.ConstraintLayout>

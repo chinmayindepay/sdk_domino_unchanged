@@ -1,0 +1,300 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".accountSetup.OtpVerificationActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_layout"
+        android:background="#250e6e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrowimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_back" />
+
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            tools:text="Authenticate Transaction"
+            android:gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Add Account" />
+
+
+
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:id="@+id/view_acc_info"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="#f4f4f6"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/header_layout"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/indepay_layout"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="#f4f4f6">
+    <TextView
+        android:id="@+id/lbl_indepay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:drawableRight="@drawable/indepay"
+        android:fontFamily="@font/roboto_medium"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_acc_info"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_indepay">
+
+        <ImageView
+            android:id="@+id/bankImage"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_bank_place_holder"
+            android:layout_height="30dp"
+            android:gravity = "right"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_otp_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_gravity="center"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#1c1d22"
+            android:gravity="end"
+            tools:text="**** **** **** 1234"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_enter_codesent"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#1c1d22"
+        android:lineSpacingExtra="10sp"
+        tools:text="Please enter verification code we’ve sent to +62812*******29 from the SMS. "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indepay_layout"/>
+    />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="37dp"
+        android:id="@+id/otp_et_layout"
+        android:gravity="center_horizontal|bottom"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_enter_codesent">
+        >
+        <com.indepay.umps.spl.pinpad.PinEntryEditText
+            android:id="@+id/txt_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="50"
+            android:maxLength="6"
+            android:longClickable="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:id="@+id/resend_otp_layout"
+        android:gravity="center_horizontal|bottom"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_et_layout">
+
+
+        <TextView
+            android:id="@+id/txt_resend_otp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="0.6"
+            android:textSize="14dp"
+            android:textColor="#303ab2"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="RESEND OTP " />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_otp_resendbelowline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:background="#e7e7e7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_otp_layout"/>
+
+
+    <TextView
+        android:id="@+id/tv_text_display"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="13dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#1c1d22"
+        android:lineSpacingExtra="4sp"
+        android:gravity="center_horizontal"
+        tools:text="The payment happens under PTP license with permission number *****231"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_otp_layout"/>
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="horizontal"
+        android:id="@+id/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_otp_layout"
+        />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_otp_layout"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <Button
+            android:id="@+id/button_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="#a1f0f8"
+            android:text="Continue"
+            android:textStyle="bold"
+            android:letterSpacing="0.03"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#250e6e"
+            android:textSize="14sp"
+            android:layout_alignParentBottom="true"
+            />
+    </LinearLayout>
+
+
+    <com.indepay.umps.spl.pinpad.PinpadView
+        android:id="@+id/view_otppinpad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spl_fontSource="@string/spl_font_default"
+        app:spl_keySpacing="8dp"
+        app:spl_numDigits="6"
+        android:visibility="gone"
+        app:spl_subTextColor="@color/spl_secondary_text"
+        app:spl_subTextSize="12sp"
+        app:spl_textColor="@color/primary_text"
+        app:spl_textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/llProgressBar"
+        android:visibility="gone"
+        layout="@layout/layout_progress_bar_with_text"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

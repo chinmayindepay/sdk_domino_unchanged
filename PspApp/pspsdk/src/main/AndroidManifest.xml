@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.indepay.umps.pspsdk">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        >
+        <!--<activity android:name=".beneficiary.wallets.WalletActivity"></activity>-->
+
+        <activity android:name=".beneficiary.paymentAddress.BenePaActivity" />
+        <activity android:name=".transaction.history.TxnDetailsActivity" />
+        <activity android:name=".transaction.history.TxnDetailsActivityUpdated"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".transaction.history.TxnHistoryActivity" />
+        <activity android:name=".transaction.collectApprove.TxnCollectApproveActivity" />
+        <activity android:name=".transaction.payment.TxnPaymentActivity" />
+        <activity android:name=".beneficiary.Contacts.BeneContactsActivity" />
+        <activity android:name=".accountSetup.ManageAccountActivity"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".transaction.payment.PaymentAccountActivity"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".transaction.payment.otpAuthActivity"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".baseActivity.SdkBaseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".registration.RegistrationActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.DayNight"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registration.SIMSelectionActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".accountSetup.UserProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".accountSetup.BankAccountListActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".setting.RTPActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.ConnectNewAccountActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.AddAccount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.VerifyWithOTP"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.VerifyAfterAddiingAccount"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/Theme.AppCompat.DayNight"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".accountSetup.AccountAddedSuccessfullActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.OtpVerificationActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/Theme.AppCompat.DayNight"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".accountSetup.McPaymentsWebview"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.MapsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".accountSetup.MapboxActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+
+        <!--<activity
+            android:name=".transaction.payment.PaymentActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />-->
+        <!--<activity
+            android:name=".beneficiary.beneAddition.UmpsBeneActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />-->
+        <!--    <activity
+                android:name=".beneficiary.beneAddition.BankAccBeneActivity"
+                android:configChanges="orientation"
+                android:screenOrientation="portrait" />
+            <activity
+                android:name=".beneficiary.beneRetrieval.BeneficiaryRetrieval"
+                android:configChanges="orientation"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait">
+                <meta-data
+                    android:name="android.app.searchable"
+                    android:resource="@xml/searchable" />
+
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <action android:name="android.intent.action.SEARCH" />
+                </intent-filter>
+            </activity>-->
+        <activity
+            android:name=".accountSetup.EcosystemBanksActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".billPayment.BillPaymentActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".billPayment.PhoneNumberAccountNumberFilling"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".billPayment.BillNumberFilled"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".billPayment.BillerInfoActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <!--<activity
+            android:name=".paymentAddress.PaymentAddressActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".registration.DeregistrationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity
+            android:name=".setting.AddBeneficiaryActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+
+        <activity android:name=".paycollectstep.BeneficiaryAddActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+
+        <service
+            android:name=".utils.NotificationService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBsE-TUEpWts6Wvmcwx8ZxD023fhJJF5QY"/>
+    </application>
+
+</manifest>

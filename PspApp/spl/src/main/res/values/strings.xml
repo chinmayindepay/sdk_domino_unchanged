@@ -1,0 +1,58 @@
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<resources>
+    <string name="spl_app_name">SPL</string>
+    <string name="spl_shared_pref">SPL_PREF</string>
+    <string name="spl_font_default" />
+
+    <string name="spl_request_loading_title">Connecting Server</string>
+    <string name="spl_request_loading_message">Please wait.. </string>
+    <string name="spl_server_error">Server Error</string>
+    <string name="spl_pin_cannot_blank">Pin can not be blank!</string>
+    <string name="spl_confirm_pin">Please confirm the pin</string>
+    <string name="spl_internet_connec">Please check your internet connectivity</string>
+    <string name="spl_no_internet_connec">No internet Connection</string>
+    <string name="spl_enter_all_details">Please enter all the details.</string>
+    <string name="spl_continue_trans">Please continue transaction from your latest registered device or clear app data and register again</string>
+    <string name="spl_device_failed">Device validation failed! </string>
+    <string name="spl_card_pin">Enter Card PIN</string>
+    <string name="spl_otp">Enter OTP</string>
+    <string name="spl_permission_required">Phone state permission required</string>
+    <string name="spl_capture_info">Capturing device info, please wait...</string>
+    <string name="spl_enter_mpin">Enter MPIN</string>
+    <string name="spl_confirm_mpin">Confirm MPIN</string>
+    <string name="spl_card_details">Verify Card Details</string>
+    <string name="spl_debit_six">Last 6 digit of your debit card</string>
+    <string name="spl_expiry">Enter expiry MM/YY</string>
+    <string name="spl_resend_otp">RESEND OTP</string>
+    <string name="spl_continu">Continue</string>
+    <string name="spl_to">To</string>
+    <string name="spl_payee">Payee</string>
+    <string name="spl_from">From</string>
+    <string name="spl_amount">Amount</string>
+    <string name="spl_account">Account</string>
+    <string name="spl_details">Details</string>
+    <string name="spl_note">Note</string>
+    <string name="spl_id">ID</string>
+</resources>

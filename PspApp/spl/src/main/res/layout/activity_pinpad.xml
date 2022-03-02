@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*******************************************************************************
+  ~  * Copyright, INDEPAY 2019 All rights reserved.
+  ~  *
+  ~  * The copyright in this work is vested in INDEPAY and the
+  ~  * information contained herein is confidential.  This
+  ~  * work (either in whole or in part) must not be modified,
+  ~  * reproduced, disclosed or disseminated to others or used
+  ~  * for purposes other than that for which it is supplied,
+  ~  * without the prior written permission of INDEPAY.  If this
+  ~  * work or any part hereof is furnished to a third party by
+  ~  * virtue of a contract with that party, use of this work by
+  ~  * such party shall be governed by the express contractual
+  ~  * terms between the INDEPAY which is a party to that contract
+  ~  * and the said party.
+  ~  *
+  ~  * Revision History
+  ~  * Date           Who        Description
+  ~  * 06-09-2019     Mayank D   Added file header
+  ~  *
+  ~  ******************************************************************************/
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".registration.DeviceRegistrationActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_additional_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/spl_blue">
+
+        <TextView
+            android:id="@+id/header_name"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:gravity="start"
+            android:padding="5dp"
+            android:textColor="@color/spl_white"/>
+        <TextView
+            android:id="@+id/header_value"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:textColor="@color/spl_white"
+            android:paddingRight="15dp"
+            />
+        <ImageView
+            android:id="@+id/iv_expand_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:src="@drawable/ic_expand_transaction_details"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/spl_enter_mpin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal|bottom"
+        android:weightSum="100">
+        <com.indepay.umps.spl.pinpad.PinEntryEditText
+            android:id="@+id/txt_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="50"
+            android:paddingEnd="10dp"
+            android:maxLength="6"
+            android:longClickable="false"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/toggle_txt_pin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="50"
+            android:src="@drawable/ic_visibility_off"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/lbl_confirm_pin"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/spl_confirm_mpin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="horizontal">
+    <com.indepay.umps.spl.pinpad.PinEntryEditText
+        android:id="@+id/txt_confirm_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_weight="50"
+        android:longClickable="false"
+        android:paddingEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLength="6" />
+        <ImageView
+            android:id="@+id/toggle_txt_confirm_pin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="50"
+            android:src="@drawable/ic_visibility_off"/>
+    </LinearLayout>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp" />-->
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.indepay.umps.spl.pinpad.PinpadView
+        android:id="@+id/view_pinpad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spl_fontSource="@string/spl_font_default"
+        app:spl_keySpacing="8dp"
+        app:spl_numDigits="6"
+        app:spl_subTextColor="@color/spl_secondary_text"
+        app:spl_subTextSize="12sp"
+        app:spl_textColor="@color/spl_primary_text"
+        app:spl_textSize="28sp" />
+
+</LinearLayout>

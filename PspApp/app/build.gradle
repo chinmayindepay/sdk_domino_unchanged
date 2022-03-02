@@ -1,0 +1,115 @@
+/*
+ * ******************************************************************************
+ *  * Copyright, INDEPAY 2019 All rights reserved.
+ *  *
+ *  * The copyright in this work is vested in INDEPAY and the
+ *  * information contained herein is confidential.  This
+ *  * work (either in whole or in part) must not be modified,
+ *  * reproduced, disclosed or disseminated to others or used
+ *  * for purposes other than that for which it is supplied,
+ *  * without the prior written permission of INDEPAY.  If this
+ *  * work or any part hereof is furnished to a third party by
+ *  * virtue of a contract with that party, use of this work by
+ *  * such party shall be governed by the express contractual
+ *  * terms between the INDEPAY which is a party to that contract
+ *  * and the said party.
+ *  *
+ *  * Revision History
+ *  * Date           Who        Description
+ *  * 06-09-2019     Mayank D   Added file header
+ *  *
+ *  *****************************************************************************
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        //applicationId "com.indepay.umps"
+        applicationId "com.indepay.umps"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        all {
+            Properties appProps = new Properties()
+            try {
+                appProps.load(new FileInputStream(file("../../Mili.properties")))
+            } catch (IOException e) {
+                e.printStackTrace()
+            }
+            buildConfigField 'String', 'PSP_BASE_URL', appProps.getProperty('PSP_BASE_URL', '')
+            buildConfigField 'boolean', 'ENABLE_CRASH_REPORT', appProps.getProperty('ENABLE_CRASH_REPORT', 'false')
+
+            buildConfigField 'String', 'MERCHANT_ID', appProps.getProperty('MERCHANT_ID', '')
+            buildConfigField 'String', 'MERCHANT_KEY', appProps.getProperty('MERCHANT_KEY', '')
+            buildConfigField 'String', 'MERCHANT_KI', appProps.getProperty('MERCHANT_KI', '')
+            buildConfigField 'String', 'APP_NAME', appProps.getProperty('APP_NAME', '')
+            buildConfigField 'String', 'INDEPAY_MOBILE', appProps.getProperty('INDEPAY_MOBILE', '')
+            buildConfigField 'String', 'REFERENCE_URL', appProps.getProperty('REFERENCE_URL', '')
+
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':pspsdk')
+
+    // implementation libraries.firebaseCore
+
+
+
+
+    implementation libraries.crashlyticsLib
+    implementation libraries.firebaseAnalytics
+    implementation libraries.supportAppcompat
+    implementation libraries.supportV4
+    implementation libraries.supportDesign
+    implementation libraries.supportConstraintLayout
+    implementation libraries.kotlinStdLib
+    implementation libraries.ankoCommons
+    implementation libraries.recyclerview
+    implementation libraries.coroutinesLib
+    implementation libraries.retrofit2Lib
+    implementation libraries.retrofitGsonConverter
+    implementation libraries.retrofitKotlinAdapter
+    implementation libraries.gsonLib
+    implementation libraries.okHttp3Logger
+    implementation libraries.playServiceLib
+    implementation libraries.cardview
+
+
+
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
